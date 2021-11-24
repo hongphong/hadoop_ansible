@@ -1,6 +1,7 @@
 ---
 # java version
 jvm_home: "/usr/lib/jvm"
+jvm_home_detail: "/usr/lib/jvm/java-1.8.0-openjdk"
 java_packages:
  - "java-1.8.0-openjdk"
  - "java-1.8.0-openjdk-devel"
@@ -38,6 +39,14 @@ core_site_properties:
   - {
     "name":"io.file.buffer.size",
     "value":"131072"
+  }
+  - {
+    "name":"hadoop.security.authorization",
+    "value":"false"
+  }
+  - {
+    "name":"hadoop.security.authentication",
+    "value":"simple"
   }
 
 dfs_namenode_httpport: 9001
