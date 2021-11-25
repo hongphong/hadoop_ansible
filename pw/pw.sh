@@ -1,1 +1,1 @@
-ssh -L 8088:localhost:8088 -i ~/.ssh/id_rsa  root@51.158.154.175
+ssh -L 50070:localhost:50070 -i ~/.ssh/id_rsa  root@51.158.154.175

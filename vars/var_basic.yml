@@ -49,7 +49,7 @@ core_site_properties:
     "value":"simple"
   }
 
-dfs_namenode_httpport: 50070
+dfs_namenode_httpport: 9870
 hdfs_site_properties:
   - {
       "name":"dfs.namenode.secondary.http-address",
@@ -90,7 +90,7 @@ mapred_site_properties:
    "value":"HADOOP_MAPRED_HOME=$HADOOP_COMMON_HOME"
  }
 
-yarn_resourcemanager_port: 8040
+yarn_resourcemanager_port: 8041
 yarn_resourcemanager_scheduler_port: 8030
 yarn_resourcemanager_webapp_port: 8088
 yarn_resourcemanager_tracker_port: 8025
