@@ -1,7 +1,7 @@
 [master]
 10.89.24.223 ansible_connection=ssh ansible_user=root ansible_password=9aweghyhJLET48P
-10.89.24.224 ansible_connection=ssh ansible_user=root ansible_password=b79ca4CcT99J7mgv
-10.89.24.225 ansible_connection=ssh ansible_user=root ansible_password=aMpXdU49b2qcHzh
+#10.89.24.224 ansible_connection=ssh ansible_user=root ansible_password=b79ca4CcT99J7mgv
+#10.89.24.225 ansible_connection=ssh ansible_user=root ansible_password=aMpXdU49b2qcHzh
 [workers]
 10.89.24.223 ansible_connection=ssh ansible_user=root ansible_password=9aweghyhJLET48P
 10.89.24.224 ansible_connection=ssh ansible_user=root ansible_password=b79ca4CcT99J7mgv

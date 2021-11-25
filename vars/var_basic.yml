@@ -49,7 +49,7 @@ core_site_properties:
     "value":"simple"
   }
 
-dfs_namenode_httpport: 9001
+dfs_namenode_httpport: 50070
 hdfs_site_properties:
   - {
       "name":"dfs.namenode.secondary.http-address",
@@ -70,6 +70,10 @@ hdfs_site_properties:
   - {
     "name":"dfs.webhdfs.enabled",
     "value":"true"
+  }
+  - {
+    "name": "dfs.http.address",
+    "value": "{{ dfs_namenode_httpport }}"
   }
 
 mapred_site_properties:
@@ -110,7 +114,7 @@ yarn_site_properties:
     "value": "{{ master_hostname }}:{{ yarn_resourcemanager_tracker_port }}"
   }
   - {
-    "name": "yarn.resourcemanager.admin.address",
+    "name": "yarn.resourcemanager.admin.address",7
     "value": "{{ master_hostname }}:{{ yarn_resourcemanager_admin_port }}"
   }
   - {
@@ -120,6 +124,10 @@ yarn_site_properties:
   - {
     "name": "yarn.nodemanager.aux-services.mapreduce.shuffle.class",
     "value": "org.apache.hadoop.mapred.ShuffleHandler"
+  }
+  - {
+    "name": "yarn.resourcemanager.hostname",
+    "value": "{{ master_hostname }}"
   }
 
 dashbord_port: 9870
