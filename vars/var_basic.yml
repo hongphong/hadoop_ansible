@@ -81,7 +81,7 @@ hdfs_site_properties:
   }
   - {
     "name": "dfs.datanode.http.address",
-    "value": "{{ worker_name }}:{{ dfs_datanode_httport }}"
+    "value": "{{ ansible_hostname }}:{{ dfs_datanode_httport }}"
   }
 
 mapred_site_properties:
@@ -131,7 +131,7 @@ yarn_site_properties:
   } 
   - {
     "name": "yarn.nodemanager.hostname",
-    "value": "{{ worker_name }}"
+    "value": "{{ ansible_hostname }}"
   }
   - {
     "name": "yarn.nodemanager.aux-services.mapreduce.shuffle.class",
