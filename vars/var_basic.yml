@@ -122,7 +122,7 @@ yarn_site_properties:
   } 
   - {
     "name": "yarn.nodemanager.hostname",
-    "value": "worker_name"
+    "value": "{{ worker_name }}"
   }
   - {
     "name": "yarn.nodemanager.aux-services.mapreduce.shuffle.class",
