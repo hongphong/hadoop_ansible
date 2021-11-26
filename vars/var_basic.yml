@@ -1,7 +1,6 @@
 ---
 # java version
 jvm_home: "/usr/lib/jvm"
-jvm_home_detail: "/usr/lib/jvm/java-1.8.0-openjdk"
 java_packages:
  - "java-1.8.0-openjdk"
  - "java-1.8.0-openjdk-devel"
@@ -129,7 +128,26 @@ yarn_site_properties:
     "name": "yarn.resourcemanager.hostname",
     "value": "{{ master_hostname }}"
   }
-
+  - {
+    "name": "yarn.scheduler.maximum-allocation-mb",
+    "value": "202752MB"
+  }
+  - {
+    "name": "yarn.nodemanager.resource.memory-mb",
+    "value": "202752MB"
+  }
+  - {
+    "name": "yarn.app.mapreduce.am.resource.mb",
+    "value": "1536MB"
+  }
+  - {
+    "name": "yarn.scheduler.minimum-allocation-mb",
+    "value": "1024MB"
+  }
+  - {
+    "name": "yarn.nodemanager.hostname",
+    "value" "{{ worker_name }}"
+  }
 dashbord_port: 9870
 firewall_ports:
   - "{{ dashbord_port}}"

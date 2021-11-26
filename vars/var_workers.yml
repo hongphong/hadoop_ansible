@@ -1,4 +1,6 @@
 ---
 master_ip: "{{ master_ip }}"
 master_hostname: "{{ master_hostname }}"
+worker_name: "{{ worker_name }}"
+
 
