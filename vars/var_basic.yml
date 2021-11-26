@@ -129,24 +129,44 @@ yarn_site_properties:
     "value": "{{ master_hostname }}"
   }
   - {
+    "name": "yarn.scheduler.minimum-allocation-mb",
+    "value": "1024"
+  }
+  - {
     "name": "yarn.scheduler.maximum-allocation-mb",
-    "value": "202752MB"
+    "value": "229376"
   }
   - {
     "name": "yarn.nodemanager.resource.memory-mb",
-    "value": "202752MB"
+    "value": "229376"
+  }
+  - {
+    "name": "mapreduce.map.memory.mb",
+    "value": "14336"
+  }
+  - {
+    "name": "mapreduce.map.java.opts",
+    "value": "-Xmx11468m"
+  }
+  - {
+    "name": "mapreduce.reduce.memory.mb",
+    "value": "28672"
+  }
+  - {
+    "name": "mapreduce.reduce.java.opts",
+    "value": "-Xmx22937m"
   }
   - {
     "name": "yarn.app.mapreduce.am.resource.mb",
-    "value": "1536MB"
+    "value": "14336"
   }
   - {
-    "name": "yarn.scheduler.minimum-allocation-mb",
-    "value": "1024MB"
+    "name": "yarn.app.mapreduce.am.command-opts",
+    "value": "-Xmx11468m"
   }
   - {
-    "name": "yarn.nodemanager.hostname",
-    "value" "{{ worker_name }}"
+    "name": "mapreduce.task.io.sort.mb",
+    "value": "1024"
   }
 dashbord_port: 9870
 firewall_ports:
