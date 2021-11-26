@@ -51,8 +51,12 @@ core_site_properties:
 dfs_namenode_httpport: 9870
 hdfs_site_properties:
   - {
-      "name":"dfs.namenode.secondary.http-address",
+      "name":"dfs.namenode.http-address",
       "value":"{{ master_hostname }}:{{ dfs_namenode_httpport }}"
+  }
+  - {
+      "name":"dfs.namenode.secondary.http-address",
+      "value":"{{ second_master_hostname }}:{{ dfs_namenode_httpport }}"
   }
   - {
       "name":"dfs.namenode.name.dir",
