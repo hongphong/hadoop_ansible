@@ -4,4 +4,5 @@ master_hostname: "{{ ansible_hostname }}"
 second_master_hostname": "{{ second_master_hostname }}"
 worker_name: "{{ ansible_hostname }}"
 current_ip: "{{ ansible_hostname }}"
+worker_ip: "{{ ansible_hostname }}"
 
