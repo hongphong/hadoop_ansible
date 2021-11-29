@@ -3,3 +3,7 @@
   template: src=zoo.cfg dest={{ zookeeper_path }}/apache-zookeeper-{{ zookeeper_version }}-bin/conf mode=644 owner={{ user }} group = {{ group }}
 - name: Change owner folder Zookeeper
   shell: sudo chown -R {{ user }}:{{ user }} {{ zookeeper_path }}
+- name: Change owner Zookeeper data dir
+  shell: mkdir {{ zookeeper_data_dir }} && sudo chown -R {{ user }}:{{ user }} {{ zookeeper_data_dir }}
+- name: Change owner Zookeeper log
+  shell: mkdir {{ zookeeper_data_log_dir }} && sudo chown -R {{ user }}:{{ user }} {{ zookeeper_data_log_dir }}
