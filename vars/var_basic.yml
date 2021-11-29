@@ -194,8 +194,8 @@ firewall_ports:
 
 # zookeeper
 zookeeper_path: "/data/zookeeper"
-zookeeper_data_dir: "/data/hadoop/zookeeper/data"
-zookeeper_data_log_dir: "/data/hadoop/zookeeper/log"
+zookeeper_data_dir: "/data/zookeeper/data"
+zookeeper_data_log_dir: "/data/zookeeper/log"
 zookeeper_port: "2181"
 zookeeper_version: "3.7.0"
 zookeeper_servers:
