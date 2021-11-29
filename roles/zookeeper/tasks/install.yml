@@ -1,6 +1,6 @@
 ---
 - name: Copy Zookeeper
-  copy: src={{ download_path }}/zookeeper-{{zookeeper-version}}.tar.gz dest=/tmp owner={{ user }} mode=755
+  copy: src={{ download_path }}/zookeeper-{{zookeeper_version}}.tar.gz dest=/tmp owner={{ user }} mode=755
   
 - name: Unzip Zookeeper
-  shell: "tar zxf /tmp/zookeeper-{{zookeeper-version}}.tar.gz -C {{ zookeeper_path }}"
+  shell: "tar zxf /tmp/zookeeper-{{zookeeper_version}}.tar.gz -C {{ zookeeper_path }}"
