@@ -27,5 +27,6 @@
     - authorized
     - java
     - hadoop
+    - zookeeper
 
 
