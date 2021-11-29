@@ -193,7 +193,7 @@ firewall_ports:
   - "{{ yarn_resourcemanager_admin_port }}"
 
 # zookeeper
-zookeeper_path: "/data/zookeeper/"
+zookeeper_path: "/data/zookeeper"
 zookeeper_data_dir: "/data/hadoop/zookeeper/data"
 zookeeper_data_log_dir: "/data/hadoop/zookeeper/log"
 zookeeper_port: "2181"
