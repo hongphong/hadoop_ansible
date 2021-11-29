@@ -1,5 +1,5 @@
 ---
 - name: Copy zoo.cfg
-  template: src=zoo.cfg dest={{ zookeeper_path }}/apache-zookeeper-{{ zookeeper_version }}/conf mode=644 owner={{ user }} group = {{ group }}
+  template: src=zoo.cfg dest={{ zookeeper_path }}/apache-zookeeper-{{ zookeeper_version }}-bin/conf mode=644 owner={{ user }} group = {{ group }}
 - name: Change owner folder Zookeeper
   shell: sudo chown -R {{ user }}:{{ user }} {{ zookeeper_path }}
