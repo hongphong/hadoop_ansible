@@ -11,9 +11,12 @@
      disable_firewall: false
      install_hadoop: true
      config_hadoop: true
+     install_zookeeper: true
+     config_zookeeper: true
   roles:
     - user
     - fetch_public_key
     - authorized
     - java
     - hadoop
+    - zookeeper

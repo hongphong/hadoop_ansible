@@ -1,0 +1,3 @@
+---
+- name: Copy zoo.cfg
+  template: src=zoo.cfg dest={{ zookeeper_path }}/zookeeper-{{zookeeper-version}} mode=644 owner={{ user }} group = {{ group }}

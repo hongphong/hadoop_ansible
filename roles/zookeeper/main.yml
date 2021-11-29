@@ -1,0 +1,6 @@
+---
+- include: install.yml
+  when: install_zookeeper
+- include: config.yml
+  when: config_zookeeper
+
