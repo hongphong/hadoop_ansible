@@ -1,4 +1,6 @@
 ---
+- name: Create Zookeeper path
+  shell: mkdir -p {{ zookeeper_path }}
 - name: Copy Zookeeper
   copy: src={{ download_path }}/zookeeper-{{zookeeper_version}}.tar.gz dest=/tmp owner={{ user }} mode=755
   

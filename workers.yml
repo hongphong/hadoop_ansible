@@ -22,6 +22,8 @@
     disable_firewall: true
     install_hadoop: true
     config_hadoop: true
+    install_zookeeper: true
+    config_zookeeper: true
   roles:
     - user
     - authorized
