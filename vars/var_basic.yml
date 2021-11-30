@@ -184,7 +184,11 @@ yarn_site_properties:
   }
   - {
     "name": "yarn.nodemanager.aux-services",
-    "value": "mapreduce_shuffle,spark_shuffle"
+    "value": "mapreduce_shuffle,spark_shuffle,spark2_shuffle"
+  }
+  - {
+    "name": "yarn.nodemanager.aux-services.spark_shuffle.class",
+    "value": "org.apache.spark.network.yarn.YarnShuffleService"
   }
 dashbord_port: 9870
 firewall_ports:
