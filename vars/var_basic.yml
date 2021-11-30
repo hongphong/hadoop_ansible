@@ -184,7 +184,7 @@ yarn_site_properties:
   }
   - {
     "name": "yarn.nodemanager.aux-services",
-    "value": "mapreduce_shuffle"
+    "value": "mapreduce_shuffle,spark_shuffle"
   }
 dashbord_port: 9870
 firewall_ports:
