@@ -107,23 +107,23 @@ yarn_resourcemanager_admin_port: 8141
 yarn_site_properties:
   - {
     "name":"yarn.resourcemanager.address",
-    "value":"{{ master_hostname }}:{{ yarn_resourcemanager_port }}"
+    "value":"{{ second_master_hostname }}:{{ yarn_resourcemanager_port }}"
   }
   - {
     "name":"yarn.resourcemanager.scheduler.address",
-    "value":"{{ master_hostname }}:{{ yarn_resourcemanager_scheduler_port }}"
+    "value":"{{ second_master_hostname }}:{{ yarn_resourcemanager_scheduler_port }}"
   }
   - {
     "name":"yarn.resourcemanager.webapp.address",
-    "value":"{{ master_hostname }}:{{ yarn_resourcemanager_webapp_port }}"
+    "value":"{{ second_master_hostname }}:{{ yarn_resourcemanager_webapp_port }}"
   }
   - {
     "name": "yarn.resourcemanager.resource-tracker.address",
-    "value": "{{ master_hostname }}:{{ yarn_resourcemanager_tracker_port }}"
+    "value": "{{ second_master_hostname }}:{{ yarn_resourcemanager_tracker_port }}"
   }
   - {
     "name": "yarn.resourcemanager.admin.address",
-    "value": "{{ master_hostname }}:{{ yarn_resourcemanager_admin_port }}"
+    "value": "{{ second_master_hostname }}:{{ yarn_resourcemanager_admin_port }}"
   }
   - {
     "name": "yarn.nodemanager.aux-services",
