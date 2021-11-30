@@ -12,8 +12,8 @@ hive_create_path:
   - "{{ hive_tmp }}"
 
 hive_warehouse: "/user/hive/warehouse"
-hive_scratchdir: "/user/hive/tmp"
-hive_querylog_location: "/user/hive/log"
+hive_scratchdir: "/data/hadoop/hive/scratchdir"
+hive_querylog_location: "/data/hadoop/hive/log"
 
 hive_hdfs_path: 
   - "{{ hive_warehouse }}"
