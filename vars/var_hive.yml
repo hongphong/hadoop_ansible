@@ -65,6 +65,34 @@ hive_site_properties:
     "name":"hive.server2.logging.operation.log.location",
     "value":"{{ hive_logging_operation_log_location }}"
   }
+  - {
+    "name":"hive.exec.dynamic.partition",
+    "value":"true"
+  }
+  - {
+    "name":"hive.exec.dynamic.partition.mode",
+    "value":"nonstrict"
+  }
+  - {
+    "name":"hive.support.concurrency",
+    "value":"false"
+  }
+  - {
+    "name":"hive.txn.manager",
+    "value":"org.apache.hadoop.hive.ql.lockmgr.DummyTxnManager"
+  }
+  - {
+    "name":"hive.enforce.bucketing",
+    "value":"false"
+  }
+  - {
+    "name":"hive.compactor.initiator.on",
+    "value":"false"
+  }
+  - {
+    "name":"hive.compactor.worker.threads",
+    "value":"0"
+  }
 
 hive_server_port: 10000
 hive_hwi_port: 9999
