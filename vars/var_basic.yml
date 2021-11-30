@@ -182,6 +182,10 @@ yarn_site_properties:
     "name": "mapreduce.task.io.sort.mb",
     "value": "1024"
   }
+  - {
+    "name": "yarn.nodemanager.aux-services",
+    "value": "mapreduce_shuffle"
+  }
 dashbord_port: 9870
 firewall_ports:
   - "{{ dashbord_port}}"
