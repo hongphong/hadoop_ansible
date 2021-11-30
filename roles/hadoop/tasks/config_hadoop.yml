@@ -19,3 +19,9 @@
 
 - name: Set Hadoop Env
   shell: source /etc/profile.d/hadoop_env.sh
+- name: Copy file Hadoop run server-start_master.sh
+  template: src=start_master.sh dest=./{{ hadoop_path }}/hadoop-{{hadoop_version}}/sbin mode=644 owner={{ user }} group = {{ group }}
+- name: Copy file Hadoop run server-start_node.sh
+  template: src=start_node.sh dest=./{{ hadoop_path }}/hadoop-{{hadoop_version}}/sbin mode=644 owner={{ user }} group = {{ group }}
+- name: Copy file Hadoop run server-start_second_master.sh
+  template: src=start_second_master.sh dest=./{{ hadoop_path }}/hadoop-{{hadoop_version}}/sbin mode=644 owner={{ user }} group = {{ group }}
