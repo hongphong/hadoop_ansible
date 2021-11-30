@@ -3,7 +3,7 @@
 # hive basic vars
 download_path: "/data/setups/hadoop"
 hive_version: "3.1.2"
-hive_path: "/data/hadoop"
+hive_path: "/data/hadoop/hive"
 hive_full_path: "/data/hadoop/hive/apache-hive-{{hive_version}}-bin"
 hive_config_path: "{{ hive_full_path }}/conf"
 hive_tmp: "/data/hadoop/hive/tmp"
