@@ -18,7 +18,7 @@
   template: src=hadoop_env.sh dest=/etc/profile.d/ mode=755
 
 - name: Fix yarn with spark
-  copy: src={{ ansible_path }}/path/spark-network-yarn_2.12-3.1.2.jar dest={{ hadoop_path }}/hadoop-{{hadoop_version}}/share/hadoop/yarn/lib owner={{ user }} mode=755
+  copy: src={{ ansible_path }}/path/spark-network-yarn_2.12-3.1.2.7.2.12.0-291.jar dest={{ hadoop_path }}/hadoop-{{hadoop_version}}/share/hadoop/yarn/lib owner={{ user }} mode=755
 - name: Set Hadoop Env
   shell: source /etc/profile.d/hadoop_env.sh
 - name: Copy file Hadoop run server-start_node1.sh
