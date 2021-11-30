@@ -6,7 +6,7 @@ java_packages:
  - "java-1.8.0-openjdk-devel"
 
 
-
+ansible_path: "/data/setups/hadoop_ansible"
 # hadoop basic vars
 download_path: "/data/setups/hadoop"
 hadoop_version: "3.2.2"
