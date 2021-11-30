@@ -1,0 +1,7 @@
+---
+- name: Create Spark path
+  shell: mkdir -p {{ spark_path }}  
+- name: Copy Spark Path
+  copy: src={{ download_path }}/apache-spark-{{ spark_version }}.tgz dest=/tmp owner={{ user }} mode=755
+- name: Unzip Spark
+  shell: "tar zxf /tmp/apache-spark-{{ spark_version }}.tgz -C {{ spark_path }}"

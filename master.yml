@@ -5,14 +5,18 @@
    - vars/var_basic.yml
    - vars/var_master.yml
   vars:
-     add_user: true
-     generate_key: true
-     open_firewall: true
+     add_user: false
+     generate_key: false
+     open_firewall: false
      disable_firewall: false
-     install_hadoop: true
-     config_hadoop: true
-     install_zookeeper: true
-     config_zookeeper: true
+     install_hadoop: false
+     config_hadoop: false
+     install_zookeeper: false
+     config_zookeeper: false
+     install_spark: true
+     config_spark: true
+     install_kafka: true
+     config_kafka: true
   roles:
     - user
     - fetch_public_key

@@ -211,3 +211,8 @@ zookeeper_servers:
     "name": "server.3",
     "value": "10.89.24.225:2888:3888"
   }
+# spark
+spark_version: "3.1.2"
+spark_path: "/data/spark"
+spark_full_path: "/data/spark/spark-3.1.2-bin-hadoop3.2"
+# kafka

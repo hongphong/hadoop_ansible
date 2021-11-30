@@ -1,0 +1,6 @@
+---
+- name: Change owner folder Spark
+  shell: sudo chown -R {{ user }}:{{ user }} {{ spark_full_path }}
+
+- name: Copy spark_env.sh
+  template: src=spark_env.sh dest={{ spark_full_path }}/conf mode=644 owner={{ user }} group = {{ group }}
