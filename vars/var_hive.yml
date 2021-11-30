@@ -3,7 +3,7 @@
 # hive basic vars
 download_path: "/data/setups/hadoop"
 hive_version: "3.1.2"
-hive_path: "/data/hadoop/hive"
+hive_path: "/data/hadoop"
 hive_full_path: "/data/hadoop/hive/apache-hive-{{hive_version}}-bin"
 hive_config_path: "{{ hive_full_path }}/conf"
 hive_tmp: "/data/hadoop/hive/tmp"
@@ -12,8 +12,8 @@ hive_create_path:
   - "{{ hive_tmp }}"
 
 hive_warehouse: "/user/hive/warehouse"
-hive_scratchdir: "/data/hadoop/hive/scratchdir"
-hive_querylog_location: "/data/hadoop/hive/log"
+hive_scratchdir: "/user/hive/tmp"
+hive_querylog_location: "/user/hive/log"
 
 hive_hdfs_path: 
   - "{{ hive_warehouse }}"
@@ -25,7 +25,7 @@ hive_logging_operation_log_location: "{{ hive_tmp }}/{{ user }}/operation_logs"
 # database
 db_type: "postgres"
 hive_connection_driver_name: "org.postgresql.Driver"
-hive_connection_host: "10.89.24.223"
+hive_connection_host: "10.89.24.224"
 hive_connection_port: "5432"
 hive_connection_dbname: "hive"
 hive_connection_user_name: "hive"
