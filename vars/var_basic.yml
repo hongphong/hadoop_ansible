@@ -98,7 +98,11 @@ mapred_site_properties:
    "name":"yarn.app.mapreduce.am.env",
    "value":"HADOOP_MAPRED_HOME=$HADOOP_COMMON_HOME"
  }
-
+# spark
+spark_version: "3.1.2"
+spark_path: "/data/spark"
+spark_full_path: "/data/spark/spark-3.1.2-bin-hadoop3.2"
+# yarn
 yarn_resourcemanager_port: 8041
 yarn_resourcemanager_scheduler_port: 8030
 yarn_resourcemanager_webapp_port: 8088
@@ -190,6 +194,10 @@ yarn_site_properties:
     "name": "yarn.nodemanager.aux-services.spark_shuffle.class",
     "value": "org.apache.spark.network.yarn.YarnShuffleService"
   }
+  - {
+    "name": "yarn.nodemanager.aux-services.spark2_shuffle.classpath",
+    "value": "{{ spark_full_path }}/yarn/spark-{{ spark_version }}-yarn-shuffle.jar"
+  }
 dashbord_port: 9870
 firewall_ports:
   - "{{ dashbord_port}}"
@@ -220,8 +228,5 @@ zookeeper_servers:
     "name": "server.3",
     "value": "10.89.24.225:2888:3888"
   }
-# spark
-spark_version: "3.1.2"
-spark_path: "/data/spark"
-spark_full_path: "/data/spark/spark-3.1.2-bin-hadoop3.2"
+
 # kafka
