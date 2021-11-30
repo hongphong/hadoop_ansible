@@ -4,6 +4,7 @@
    - vars/user.yml
    - vars/var_basic.yml
    - vars/var_master.yml
+   - vars/var_hive.yml
   vars:
      add_user: false
      generate_key: false
