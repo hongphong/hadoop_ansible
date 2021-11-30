@@ -9,5 +9,6 @@
 
 - name: Fix bug Gua lib
   shell: "rm -rf {{ hive_full_path }}/lib/guava-19.0.jar"
+
 - name: Fix bug Gua lib
   shell: "cp {{ hadoop_full_path }}/share/hadoop/hdfs/lib/guava-27.0-jre.jar  {{ hive_full_path }}/lib/"
