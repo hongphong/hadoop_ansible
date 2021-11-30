@@ -11,5 +11,7 @@ export YARN_RESOURCEMANAGER_USER={{user}}
 export YARN_NODEMANAGER_USER={{user}}
 export HADOOP_HEAPSIZE="1024"
 export HADOOP_NAMENODE_INIT_HEAPSIZE="-Xms8192m"
+export SPARK_HOME={{ spark_full_path }}
+
 
 ulimit -n 128000

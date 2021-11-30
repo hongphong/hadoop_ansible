@@ -4,3 +4,9 @@
 
 - name: Copy spark_env.sh
   template: src=spark_env.sh dest={{ spark_full_path }}/conf mode=644 owner={{ user }} group = {{ group }}
+
+- name: Copy spark-defaults.conf
+  template: src=spark-defaults.conf dest={{ spark_full_path }}/conf mode=644 owner={{ user }} group = {{ group }}
+
+- name: Create Spark tmp
+  shell: mkdir -p {{ spark_full_path }}/tmp && sudo chown -R {{ user }}:{{ user }} {{ spark_full_path }}
