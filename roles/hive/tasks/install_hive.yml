@@ -1,4 +1,6 @@
 ---
+- name: Create Hive Path
+  shell: mkdir -p {{ hive_path }}  
 - name: Copy Hive
   copy: src={{ download_path }}/apache-hive-{{hive_version}}-bin.tar.gz dest=/tmp owner={{ user }} mode=755
   

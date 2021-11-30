@@ -1,4 +1,7 @@
 ---
+- name: Change owner hive path
+  shell: sudo chown -R {{ user }}:{{ user }} {{ hive_path }}
+
 - name: Copy Hive Site
   template: src=hive-site.xml dest={{ hive_config_path }} mode=644 owner={{ user }} group = {{ group }}
 
