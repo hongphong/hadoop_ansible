@@ -139,7 +139,7 @@ yarn_site_properties:
   }
   - {
     "name": "yarn.resourcemanager.hostname",
-    "value": "{{ master_hostname }}"
+    "value": "{{ second_master_hostname }}"
   }
   - {
     "name": "yarn.scheduler.minimum-allocation-mb",

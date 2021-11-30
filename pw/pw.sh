@@ -1,1 +1,1 @@
-ssh -L $1:localhost:$1 -i ~/.ssh/id_rsa  root@51.158.154.175
+ssh -L $2:localhost:$2 -i ~/.ssh/id_rsa  root@51.158.154.$1
