@@ -232,6 +232,7 @@ zookeeper_servers:
 # kafka
 kafka_path: "/data/kafka"
 kafka_data_dir: "/data/kafka/data"
+kafka_log_dir: "/data/kafka/log"
 kafka_port: "2181"
 kafka_version: "2.12-2.8.1"
 kafka_fullpath:  "/data/kafka/kafka_{{  kafka_version }}"

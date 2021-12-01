@@ -6,3 +6,6 @@
   
 - name: Unzip Kafka
   shell: "tar zxf /tmp/kafka_{{kafka_version}}.tgz -C {{ kafka_path }}"
+
+- name: Create Kafka Log
+  shell: mkdir -p {{ kafka_log_dir }}
