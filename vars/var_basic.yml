@@ -235,20 +235,3 @@ kafka_data_dir: "/data/kafka/data"
 kafka_port: "2181"
 kafka_version: "2.12-2.8.1"
 kafka_fullpath:  "/data/kaka/kafka_{{  kafka_version }}"
-kafka_config:
-  - {
-    "name": "advertised.listeners",
-    "value": "10.89.24.0/24"
-  }
-  - {
-    "name": "log.dirs",
-    "value": "{{ kafka_data_dir }}"
-  }
-  - {
-    "name": "num.partitions",
-    "value": "3"
-  }
-  - {
-    "name": "zookeeper.connect",
-    "value": "solalpha-1:2181,solalpha-2:2181,solalpha-3:2181"
-  }
