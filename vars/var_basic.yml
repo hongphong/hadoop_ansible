@@ -234,7 +234,7 @@ kafka_path: "/data/kafka"
 kafka_data_dir: "/data/kafka/data"
 kafka_port: "2181"
 kafka_version: "2.12-2.8.1"
-kafka_fullpath:  "/data/kaka/kafka-{{  kafka_version }}"
+kafka_fullpath:  "/data/kaka/kafka_{{  kafka_version }}"
 kafka_config:
   - {
     "name": "advertised.listeners",
