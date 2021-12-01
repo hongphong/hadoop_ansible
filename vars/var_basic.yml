@@ -218,15 +218,37 @@ zookeeper_version: "3.7.0"
 zookeeper_servers:
   - {
     "name": "server.1",
-    "value": "10.89.24.223:2888:3888"
+    "value": "solalpha-1:2888:3888"
   }
   - {
     "name": "server.2",
-    "value": "10.89.24.224:2888:3888"
+    "value": "solalpha-2:2888:3888"
   }
   - {
     "name": "server.3",
-    "value": "10.89.24.225:2888:3888"
+    "value": "solalpha-3:2888:3888"
   }
 
 # kafka
+kafka_path: "/data/kafka"
+kafka_data_dir: "/data/kafka/data"
+kafka_port: "2181"
+kafka_version: "2.12-2.8.1"
+kafka_fullpath:  "/data/kaka/kafka-{{  kafka_version }}"
+kafka_config:
+  - {
+    "name": "advertised.listeners",
+    "value": "10.89.24.0/24"
+  }
+  - {
+    "name": "log.dirs",
+    "value": "{{ kafka_data_dir }}"
+  }
+  - {
+    "name": "num.partitions",
+    "value": "3"
+  }
+  - {
+    "name": "zookeeper.connect",
+    "value": "solalpha-1:2181,solalpha-2:2181,solalpha-3:2181"
+  }

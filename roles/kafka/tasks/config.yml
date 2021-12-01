@@ -1,0 +1,9 @@
+---
+- name: Copy kafka server.properties
+  template: src=server.properties dest={{ kafka_fullpath }}/config mode=644 owner={{ user }} group = {{ group }}
+- name: Change owner folder Kafka
+  shell: sudo chown -R {{ user }}:{{ user }} {{ kafka_fullpath }}
+- name: Change owner Kafka data dir
+  shell: mkdir -p {{ kafka_data_dir }} && sudo chown -R {{ user }}:{{ user }} {{ kafka_data_dir }}
+- name: Change owner Kafka log
+  shell: mkdir -p {{ kafka_data_log_dir }} && sudo chown -R {{ user }}:{{ user }} {{ kafka_data_log_dir }}

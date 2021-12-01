@@ -1,0 +1,8 @@
+---
+- name: Create Kafka path
+  shell: mkdir -p {{ kafka_path }}
+- name: Copy Kafka
+  copy: src={{ download_path }}/kafka-{{kafka_version}}.tgz dest=/tmp owner={{ user }} mode=755
+  
+- name: Unzip Kafka
+  shell: "tar zxf /tmp/kafka-{{kafka_version}}.tgz -C {{ kafka_path }}"
