@@ -5,5 +5,9 @@
   shell: sudo chown -R {{ user }}:{{ user }} {{ zookeeper_path }}
 - name: Change owner Zookeeper data dir
   shell: mkdir -p {{ zookeeper_data_dir }} && sudo chown -R {{ user }}:{{ user }} {{ zookeeper_data_dir }}
+
+- name: Copy zoo.cfg
+  template: src=myid dest={{ zookeeper_data_dir }} mode=644 owner={{ user }} group = {{ group }}
+
 - name: Change owner Zookeeper log
   shell: mkdir -p {{ zookeeper_data_log_dir }} && sudo chown -R {{ user }}:{{ user }} {{ zookeeper_data_log_dir }}

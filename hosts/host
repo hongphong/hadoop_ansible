@@ -1,7 +1,7 @@
 [master]
-10.89.24.223 ansible_connection=ssh ansible_user=root ansible_password=9aweghyhJLET48P kafka_brokerid=1
-10.89.24.224 ansible_connection=ssh ansible_user=root ansible_password=b79ca4CcT99J7mgv kafka_brokerid=2
-10.89.24.225 ansible_connection=ssh ansible_user=root ansible_password=aMpXdU49b2qcHzh kafka_brokerid=3
+10.89.24.223 ansible_connection=ssh ansible_user=root ansible_password=9aweghyhJLET48P kafka_brokerid=1 zoo_id=1
+10.89.24.224 ansible_connection=ssh ansible_user=root ansible_password=b79ca4CcT99J7mgv kafka_brokerid=2 zoo_id=2
+10.89.24.225 ansible_connection=ssh ansible_user=root ansible_password=aMpXdU49b2qcHzh kafka_brokerid=3 zoo_id=3
 [workers]
 10.89.24.223 ansible_connection=ssh ansible_user=root ansible_password=9aweghyhJLET48P 
 10.89.24.224 ansible_connection=ssh ansible_user=root ansible_password=b79ca4CcT99J7mgv
