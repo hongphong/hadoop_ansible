@@ -70,7 +70,11 @@ hdfs_site_properties:
   }
   - {
       "name":"dfs.replication",
-      "value":"{{ groups['workers']|length }}"
+      "value": "2"
+  }
+  - {
+      "name":"dfs.block.size",
+      "value": "134217728"
   }
   - {
     "name":"dfs.webhdfs.enabled",
