@@ -12,6 +12,8 @@ export YARN_NODEMANAGER_USER={{user}}
 export HADOOP_HEAPSIZE="1024"
 export HADOOP_NAMENODE_INIT_HEAPSIZE="-Xms8192m"
 export SPARK_HOME={{ spark_full_path }}
-
-
+export PYSPARK_PYTHON=python3
+export HADOOP_PID_DIR='/data/hadoop/tmp/'
+export HADOOP_SECURE_DN_PID_DIR='/data/hadoop/tmp/'
+export YARN_PID_DIR='/data/hadoop/tmp/'
 ulimit -n 128000
