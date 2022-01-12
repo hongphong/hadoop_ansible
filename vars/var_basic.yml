@@ -204,11 +204,11 @@ yarn_site_properties:
   }
   - {
     "name": "yarn.nodemanager.localizer.cache.cleanup.interval-ms",
-    "value": "10000"
+    "value": "40000"
   }
   - {
     "name": "yarn.nodemanager.localizer.cache.target-size-mb",
-    "value": "4GB"
+    "value": "5120"
   }
 dashbord_port: 9870
 firewall_ports:
