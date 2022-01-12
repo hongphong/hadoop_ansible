@@ -202,6 +202,14 @@ yarn_site_properties:
     "name": "yarn.nodemanager.aux-services.spark_shuffle.classpath",
     "value": "{{ spark_full_path }}/yarn/spark-{{ spark_version }}-yarn-shuffle.jar"
   }
+  - {
+    "name": "yarn.nodemanager.localizer.cache.cleanup.interval-ms",
+    "value": "10000"
+  }
+  - {
+    "name": "yarn.nodemanager.localizer.cache.target-size-mb",
+    "value": "4GB"
+  }
 dashbord_port: 9870
 firewall_ports:
   - "{{ dashbord_port}}"
