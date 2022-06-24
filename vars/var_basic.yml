@@ -156,11 +156,11 @@ yarn_site_properties:
   }
   - {
     "name": "yarn.scheduler.maximum-allocation-mb",
-    "value": "229376"
+    "value": "170000"
   }
   - {
     "name": "yarn.nodemanager.resource.memory-mb",
-    "value": "229376"
+    "value": "170000"
   }
   - {
     "name": "mapreduce.map.memory.mb",

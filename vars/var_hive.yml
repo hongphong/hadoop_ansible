@@ -25,7 +25,7 @@ hive_logging_operation_log_location: "{{ hive_tmp }}/{{ user }}/operation_logs"
 # database
 db_type: "postgres"
 hive_connection_driver_name: "org.postgresql.Driver"
-hive_connection_host: "10.89.24.224"
+hive_connection_host: "10.91.203.197"
 hive_connection_port: "5432"
 hive_connection_dbname: "hive"
 hive_connection_user_name: "hive"

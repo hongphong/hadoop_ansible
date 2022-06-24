@@ -9,4 +9,4 @@
   template: src=hive_env.sh dest=/etc/profile.d/ mode=755
 
 - name: Set Hive Env
-  shell: source /etc/profile.d/hive_env.sh
+  shell: su hadoop -c 'source /etc/profile.d/hive_env.sh'

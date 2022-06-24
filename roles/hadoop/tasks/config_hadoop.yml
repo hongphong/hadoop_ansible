@@ -18,7 +18,8 @@
   template: src=hadoop_env.sh dest=/etc/profile.d/ mode=755
 
 - name: Set Hadoop Env
-  shell: source /etc/profile.d/hadoop_env.sh
+  shell: su hadoop -c 'source /etc/profile.d/hadoop_env.sh'
+
 - name: Copy file Hadoop run server-start_node1.sh
   template: src=start_node1.sh dest={{ hadoop_path }}/hadoop-{{hadoop_version}}/sbin mode=755 owner={{ user }} group = {{ group }}
 - name: Copy file Hadoop run server-start_node2.sh

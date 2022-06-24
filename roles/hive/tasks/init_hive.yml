@@ -1,13 +1,19 @@
 ---
+- name: Set JAVA Env
+  shell: sudo su - hadoop -c 'source /etc/profile.d/java_home.sh'
+
+- name: Set Hive Env
+  shell: sudo su - hadoop -c 'source /etc/profile.d/hive_env.sh'
+
 - name: Init hdfs path
-  shell: su {{ user }} -c "hdfs dfs -mkdir -p {{ item }}"
+  shell: sudo su - hadoop -c 'source /etc/profile.d/java_home.sh & source /etc/profile.d/hive_env.sh' & sudo su - hadoop -c "source /etc/profile.d/java_home.sh & source /etc/profile.d/hive_env.sh & /data/hadoop/hadoop-3.2.2/bin/hdfs dfs -mkdir -p {{ item }}"
   with_items:
     - "{{ hive_hdfs_path }}"
 
 - name: Change Authority
-  shell: su {{ user }} -c "hdfs dfs -chmod -R 777 {{ item }}"
+  shell: sudo su - hadoop -c 'source /etc/profile.d/java_home.sh & source /etc/profile.d/hive_env.sh' & sudo su - hadoop -c "source /etc/profile.d/java_home.sh & /data/hadoop/hadoop-3.2.2/bin/hdfs dfs -chmod -R 777 {{ item }}"
   with_items:
     - "{{ hive_hdfs_path }}"
 
 - name: Init Hive
-  shell: su {{ user }} -c "schematool -initSchema -dbType {{ db_type }}"
+  shell: sudo su - hadoop -c 'source /etc/profile.d/java_home.sh & source /etc/profile.d/hive_env.sh' &  sudo su - hadoop -c "schematool -initSchema -dbType {{ db_type }}"

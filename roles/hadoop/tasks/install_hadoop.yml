@@ -4,3 +4,6 @@
   
 - name: Unzip Hadoop
   shell: "tar zxf /tmp/hadoop-{{hadoop_version}}.tar.gz -C {{ hadoop_path }}"
+
+- name: Change Owner
+  shell: "chown -R {{ user }}:{{ group }} {{ hadoop_path }}"

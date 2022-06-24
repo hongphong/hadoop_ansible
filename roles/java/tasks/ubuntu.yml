@@ -1,0 +1,9 @@
+---
+- name: Install OpenJdk Ubuntu.
+  shell: sudo apt-get install openjdk-8-jdk
+
+- name: Copy Java Home Script
+  template: src=java_home.sh dest=/etc/profile.d
+
+- name: Set Java Home Script
+  shell: su hadoop -c 'source /etc/profile.d/java_home.sh'

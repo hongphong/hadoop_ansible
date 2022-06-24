@@ -11,19 +11,19 @@
      open_firewall: false
      disable_firewall: false
      install_hadoop: false
-     config_hadoop: false
+     config_hadoop: true
      install_zookeeper: false
      config_zookeeper: false
      install_spark: true
      config_spark: true
-     install_kafka: true
-     config_kafka: true
+     install_kafka: false
+     config_kafka: false
   roles:
     - user
     - fetch_public_key
     - authorized
     - java
     - hadoop
-    - zookeeper
+    # - zookeeper
     - spark
-    - kafka
+    # - kafka

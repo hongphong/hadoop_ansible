@@ -6,7 +6,7 @@
    - vars/var_master.yml
    - vars/var_hive.yml
   vars:
-     open_firewall: true
+     open_firewall: false
      install_hive: true
      config_hive: true
      init_hive: true

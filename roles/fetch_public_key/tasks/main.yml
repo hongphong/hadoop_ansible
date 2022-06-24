@@ -1,6 +1,13 @@
 ---
+- name: Cp Public Key to temp
+  template: src=/home/{{ user }}/.ssh/id_rsa.pub dest=/tmp/id_{{ user }}.pub
+
+- name: Change owner key
+  shell: sudo chown -R {{ user }}:{{ user }} /tmp/id_{{ user }}.pub
+
 - name: Get Lastest Public From Hadoop Master
   fetch: 
     src: /home/{{ user }}/.ssh/id_rsa.pub
-    dest: /tmp/id_{{ ansible_host }}_{{ user }}.pub
+    dest: /tmp/id_{{ user }}.pub
     flat: yes
+  
