@@ -1,17 +1,17 @@
 [master]
-195.154.26.88 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY kafka_brokerid=1 zoo_id=1
-195.154.28.99 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY kafka_brokerid=2 zoo_id=2
-195.154.28.103 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY kafka_brokerid=3 zoo_id=3
-195.154.27.25 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY kafka_brokerid=3 zoo_id=3
+195.154.26.88 ansible_connection=ssh ansible_user=root ansible_password=***** kafka_brokerid=1 zoo_id=1
+195.154.28.99 ansible_connection=ssh ansible_user=root ansible_password=***** kafka_brokerid=2 zoo_id=2
+195.154.28.103 ansible_connection=ssh ansible_user=root ansible_password=***** kafka_brokerid=3 zoo_id=3
+195.154.27.25 ansible_connection=ssh ansible_user=root ansible_password=***** kafka_brokerid=3 zoo_id=3
 
 [workers]
-195.154.26.88 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY 
-195.154.28.99 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY
-195.154.28.103 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY
-195.154.27.25 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY kafka_brokerid=3 zoo_id=3
+195.154.26.88 ansible_connection=ssh ansible_user=root ansible_password=***** 
+195.154.28.99 ansible_connection=ssh ansible_user=root ansible_password=*****
+195.154.28.103 ansible_connection=ssh ansible_user=root ansible_password=*****
+195.154.27.25 ansible_connection=ssh ansible_user=root ansible_password=***** kafka_brokerid=3 zoo_id=3
 
 [hive]
-195.154.26.88 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY
-195.154.28.99 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY
-195.154.28.103 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY
-195.154.27.25 ansible_connection=ssh ansible_user=root ansible_password=B9z2FzajQU9HbxY kafka_brokerid=3 zoo_id=3
+195.154.26.88 ansible_connection=ssh ansible_user=root ansible_password=*****
+195.154.28.99 ansible_connection=ssh ansible_user=root ansible_password=*****
+195.154.28.103 ansible_connection=ssh ansible_user=root ansible_password=*****
+195.154.27.25 ansible_connection=ssh ansible_user=root ansible_password=***** kafka_brokerid=3 zoo_id=3
